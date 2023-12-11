@@ -33,7 +33,6 @@ header {
   width: 100%;
   display: grid;
   grid-template-rows: auto 100px;
-  box-sizing: border-box;
 }
 .header-icons {
   width: 100%;
@@ -78,42 +77,44 @@ nav .nav__logo-container img {
   color: black;
   border-bottom: 1px solid black;
 }
+
+
 main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-perfil {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 1024px;
 }
-.main__section-news {
+.perfil-section {
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  padding: 0 30px 60px; 
+  padding: 40px; 
   background-color: var(--dark-white);
 }
-.main__section-news--grid {
+.perfil-section--grid {
   display: grid;
   grid-template-columns: 4fr 2fr ;
 }
-.section-news__title {
-  display: flex; 
-}
-.section-news__title p {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-.section-news__img-container {
+.perfil-section__img-container {
   width: 90%;
 }
-.section-news__img-container img{
+.perfil-section__img-container img{
   width: 100%;
   height:  100%;
 }
-.section-news__info h2 {
+.perfil-section__info h2 {
   font-size: 2.5rem;
 }
-.section-news__info p {
+.perfil-section__info p {
   max-width: 95%;
   font-size: .9rem;
   margin-bottom: 30px;
@@ -143,25 +144,66 @@ main {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.section-last__grid-blogs {
+.section-last__grid-proyects {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  place-content: center;
-
   gap: 30px;
 }
-.blog-targeta img {
+.targeta__img-container {
+  display: inline-block;
   width: 100%;
+  height: 200px;
 }
-.blog-targeta p {
+.proyect-targeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.proyect-targeta h2 {
+  font-size: 1.2rem;
+}
+.proyect-targeta p {
   font-size: .9rem;
 }
+
+.contact-main {
+  width: 100%;
+  background-color: var(--light-white);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(auto-fill, 250px);
+  place-content: center;
+}
+.contact-main img {
+  width: 120px;
+  height: 120px;
+}
+.contact-main a {
+  border-bottom: 1px solid black;
+  padding-bottom: 6px;
+}
+.contact-main__like-section, .contact-main__newsletter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.like-section__info-container, .newsletter-section__info-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin-left: 18px;
+}
+
 
 footer {
   width: 100%;
   position: relative;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .footer__parragraph-container {
   width: 100%;
@@ -180,3 +222,4 @@ footer {
   top: -30px;
   left: 0;
 }
+
